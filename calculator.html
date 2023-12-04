@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="operand1" />
+    <input type="number" id="operand2" />
+    <br>
+   Result: <span id="result">-</span>
+   <br>
+     <button id="demo1">add</button>
+    <button id="demo2">subtract</button>
+    <button id="demo3">multiple</button>
+    <button id="demo4">divide</button>
+    
+    <script >
+        var Field1 = document.getElementById('operand1');
+    var Field2 = document.getElementById('operand2');
+  
+
+ document.getElementById("demo1").addEventListener("click",add)
+ document.getElementById("demo2").addEventListener("click",sub)
+     document.getElementById("demo3").addEventListener("click",mul)
+         document.getElementById("demo4").addEventListener("click",div)
+            
+ function add(){
+    var operand1 = parseFloat(Field1.value);
+      var operand2 = parseFloat(Field2.value);
+      var result=operand1+operand2
+ document.getElementById("result").textContent=result
+                 }          
+ function sub(){
+    var operand1 = parseFloat(Field1.value);
+      var operand2 = parseFloat(Field2.value);
+      var result=operand1-operand2
+ document.getElementById("result").textContent=result
+     }
+ function mul(){
+    var operand1 = parseFloat(Field1.value);
+      var operand2 = parseFloat(Field2.value);
+      var result=operand1*operand2
+ document.getElementById("result").textContent=result
+         }
+ function div(){
+    var operand1 = parseFloat(Field1.value);
+      var operand2 = parseFloat(Field2.value);
+      var result=operand1/operand2
+      if(operand2==0){
+        result="invalid input"
+      }
+
+ document.getElementById("result").textContent=result
+             }
+    </script>
+</body>
+</html>

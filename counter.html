@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document22</title>
+</head>
+<body>
+    <button id="abe">+</button>
+    <button id="abe1">reset</button>
+    <button id="abe2">-</button>
+   <h3 id="demo">0</h3>
+    <p id="abc">say hello</p>
+   <script >
+    document.getElementById("abe").addEventListener("click",function(){
+    document.getElementById("demo").innerText=counter++
+})
+document.getElementById("abe2").addEventListener("click",function(){
+    document.getElementById("demo").innerText=counter--
+})
+document.getElementById("abe1").addEventListener("click",function(){
+    document.getElementById("demo").innerText=counter=0
+})
+   </script>
+    
+</body>
+</html>

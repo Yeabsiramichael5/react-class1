@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+</head>
+<body>
+  <style>
+    button{
+      margin: 5px;
+    }
+  </style>
+    <h4>To-Do list</h4>
+   
+      <input type="text" id="input" placeholder="add ur task">
+      <button id="add">add</button>
+      <ul id="list">
+
+      </ul>
+    
+  
+ <script>
+
+  const input1=document.getElementById("input")
+   const thelist=document.getElementById("list")
+ document.getElementById("add").addEventListener("click",addlist)
+ function addlist(){
+   if(input1.value===''){
+    alert("you have to add somthing")
+   }
+   else{
+    var task1=document.createElement("li")  
+   task1.innerHTML=input1.value
+   thelist.appendChild(task1)
+   var button=document.createElement("button")
+   button.textContent="remove"
+   task1.appendChild(button)
+   }
+   button.addEventListener("click",removetask)
+  
+ input1.value=''
+ }
+ function removetask(e){
+    e.target.parentNode.remove()
+    
+   }
+   </script> 
+</body>
+</html>
